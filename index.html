@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Form</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/css/bootstrap-datetimepicker.min.css">
+
+</head>
+<body>
+	<div class="container">
+			<h1>Event Form</h1>
+			<hr/>
+			<div class="spinner">
+			  <div class="double-bounce1"></div>
+			  <div class="double-bounce2"></div>
+			</div>			
+		<form id="eventForm" class="col-md-5">
+		  <div class="form-group">
+		    <label for="eventName">Event Name</label>
+		    <input required type="text" class="form-control" id="eventName" name="eventName" placeholder="My Event">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="time">Time</label>
+		    <div class='input-group date' id='datetimepicker'>
+			    <input required type='text' name="time" id="time" class="form-control" />
+	        <span class="input-group-addon">
+	          <span class="glyphicon glyphicon-calendar"></span>
+	        </span>
+        </div> 
+		  </div>
+
+			<div class="form-group">
+		    <label for="venu">Venue</label>
+		    <input required type="text" class="form-control" name="venu" id="venue" placeholder="My Venue">
+		  </div>
+
+			<div class="form-group">
+		    <label for="imageURL">Image URL</label>
+		    <input required type="text" class="form-control" name="imageURL" id="imageURL" >
+		  </div>
+
+			<div class="form-group">
+		    <label for="description">Description</label>
+		    <textarea class="form-control" name="description" id="description"></textarea>		    
+		  </div>
+
+		  <div class="form-group">
+		    <label for="limitedPeople">Limited People</label>
+		    <input required type="number" class="form-control" id="limitedPeople" name="limitedPeople">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="category">Category</label>
+		    <select class="form-control" id="category" name="category">
+				  <option value="beer">Beer</option>
+				  <option value="smoking">Smoking</option>
+				  <option value="food">Food</option>
+				  <option value="outdoor">Outdoor</option>
+				  <option value="indoor">Indoor</option>
+				</select> 
+		  </div>
+
+		  <div class="form-group">
+    	<label for="price">Price</label>
+    	<div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input required type="text" class="form-control" name="price" id="price" placeholder="Price">     
+    </div>
+  </div>
+			
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+
+	
+		<!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- momentjs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<!-- datepicker -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/js/bootstrap-datetimepicker.min.js"></script>
+  <!-- Firebase  -->
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <link rel="stylesheet" type="text/css" href="loading.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/5.0.7/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/sweetalert2/5.0.7/sweetalert2.min.js"></script>
+  <script src="uploadData.js"></script>
+	</div>
+</body>
+</html>
